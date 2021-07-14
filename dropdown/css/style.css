@@ -1,0 +1,87 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.20rem;
+}
+h1 {
+    color: beige;
+}
+
+ul li {
+    /* margin: 0 10px; */
+    /* padding: 0; */
+    list-style: none;
+    
+}
+
+nav {
+    display: flex;
+    padding: 10px 15px;
+    background-color: lightgreen;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    text-decoration-color: lavender;
+    color: white;
+    text-align: center;
+}
+/* nav li:hover {
+    background-color: darkgreen;
+    
+} */
+
+
+.menu > li, .menu > a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: grey;
+}
+
+.menu li:hover {
+    background-color: darkcyan;
+    transition: 200ms ease-in-out
+}
+
+/* SUBMENU LEVEL 1  */
+
+.menu li {
+    position: relative;
+}
+.submenu {
+    display: block;
+    position: absolute;
+    background-color: cornflowerblue;
+    width:100%;
+    /* width: 20px;
+    left: 0; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

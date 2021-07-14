@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.moso {
+    width: 210px;
+    height: 200px;
+    background-image: url(../img/mypic.jpg);
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+/* Line height? */
+body {
+    font-family: 'Ranchers', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.7;
+    color: grey;
+    padding: 30px;
+    position: relative;
+}
+
+/* background-size: cover; */
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(116, 213, 106, 0.2), rgba(11, 137, 1, 0.9)),
+        url(../img/hero.jpg);
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 50px;
+    left: 50px
+}
+
+.logo {
+    height: 35px;
+}
+
+.textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* flex-direction: column; */
+}
+
+.heading-primary {
+    color: white;
+    text-align: center;
+    backface-visibility: hidden
+}
+.heading-primary-main {
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    display: block;
+    animation: moveInLeft 1s ease-out;
+    margin-bottom: 30px;
+}
+.heading-primary-sub {
+    display: block;
+    letter-spacing: 7px;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 500;
+    animation: moveInRight 1s ease-in-out;
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInBottm {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* //display: inline-block; overlap issue resolved
+transition: all 0.2s;
+ */
+.btn-white{
+    background-color: white;
+    color: grey;
+}
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 30px;
+    display: inline-block;
+    margin-top: 60px;
+    border-radius: 50px;
+    font-family: cursive;
+    transition: all 0.2s;
+    position: relative;
+}
+.btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 5px 5px rgba(0,0,0,0.2);
+    
+}
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 8px 1px 1px rgba(0,0,0,0.4);
+}
+.btn::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-white::after{
+    background-color: white;
+    
+}
+.btn:hover::after {
+    transform: scalex(1.6) scaleY(1.4);
+    opacity: 0;
+}
+/* animation-fill-mode: backwards; */
+.btn-animated {
+    animation: moveInBottm 0.5s 1s;
+    animation-fill-mode: backwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

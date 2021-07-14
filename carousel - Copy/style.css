@@ -1,0 +1,70 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, blue, red);
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slider>a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0.5rem 0.5rem 0;
+  position: relative;
+}
+
+.slider>a:active {
+  background: lightcoral;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+
+  /* scroll-snap-align: start; important */
+  scroll-snap-align: start;
+
+  /* flex-shrink: 0; important */
+  flex-shrink: 0;
+}
+
+/* scrollbar */
+.slides::-webkit-scrollbar {
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}

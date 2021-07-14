@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: raleway;
+    color: #fff;
+    background-color: tomato;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: beige;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+nav ul li{
+    list-style-type: none;
+    height: 40px;
+    line-height: 40px;
+    background-color: tomato;
+
+    position: relative
+}
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top:0;
+    width: 100%;
+}
+
+/* select ul which has parent nav */
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+nav ul li ul li{
+    display: none;
+}
+nav ul >li:hover ul li{
+    display: block;
+}
+nav ul ul ul{
+    display: none;
+}
+nav ul >li:hover ul li:hover ul{
+    display: block;
+}
+nav ul  li{
+    flex-basis: 20%;
+}
+nav ul li:hover {
+    background-color: thistle;
+}
